@@ -1,0 +1,25 @@
+package com.microservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.microservice.model.Account;
+import com.microservice.repository.AccountRepository;
+
+public class AccountServiceImpl implements AccountService {
+
+	@Autowired
+	AccountRepository repo;
+	
+	@Override
+	public Account create(Account account) {
+		repo.save(account);
+		return null;
+	}
+
+	@Override
+	public Account getAccount(long accountid) {
+		repo.getDistinctByAccountId(accountid);
+		return null;
+	}
+
+}

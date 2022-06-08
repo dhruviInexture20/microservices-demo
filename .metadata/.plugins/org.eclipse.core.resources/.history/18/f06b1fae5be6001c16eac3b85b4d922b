@@ -1,0 +1,31 @@
+package com.microservice.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.microservice.model.Customer;
+import com.microservice.service.CustomerService;
+
+@RestController
+@RequestMapping("/customer")
+public class CustomerController {
+	
+	@Autowired
+	CustomerService service;
+	
+	@PostMapping("/save")
+	public Customer saveCustomer(@RequestBody Customer customer ) {
+		return service.saveUser();
+	}
+	
+	@PostMapping("/view/{id}")
+	public Customer getCustomer(long id) {
+		return service.getCustomerDetails(id);
+	}
+	
+	
+	
+}

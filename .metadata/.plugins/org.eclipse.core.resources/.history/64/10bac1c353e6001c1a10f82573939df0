@@ -1,0 +1,14 @@
+package com.microservice.model;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Customer {
+
+}

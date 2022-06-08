@@ -1,0 +1,12 @@
+package com.microservice.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Account {
+	
+	private long accountid;
+	private String accountNumber;
+	private String holderName;
+	private long balance;
+}

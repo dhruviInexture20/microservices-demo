@@ -1,0 +1,22 @@
+package com.microservice.controller;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.microservice.model.Account;
+
+@RestController
+@RequestMapping("/account")
+public class AccountController {
+	
+	@PostMapping("/create")
+	Account createAccount(Account account) {
+		return service.create(account);
+	}
+	
+	Account getAccountDetails(@PathVariable long accountid) {
+		return service.getAccount(Long accountid);
+	}
+}

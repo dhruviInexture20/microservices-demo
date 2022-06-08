@@ -1,0 +1,5 @@
+package com.microservice.voTemp;
+
+public class VoTemplate {
+
+}

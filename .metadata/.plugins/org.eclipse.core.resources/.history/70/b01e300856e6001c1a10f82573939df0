@@ -1,0 +1,14 @@
+package com.microservice.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.microservice.model.Customer;
+
+@RestController
+public class CustomerController {
+	
+	Customer saveCustomer() {
+		
+	}
+	
+}

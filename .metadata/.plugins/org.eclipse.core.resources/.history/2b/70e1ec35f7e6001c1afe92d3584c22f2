@@ -1,0 +1,9 @@
+package com.microservice.voTemp;
+
+public class Account {
+
+	private long accountid;
+	private String accountNumber;
+	private long balance;
+	
+}

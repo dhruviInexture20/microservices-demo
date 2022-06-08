@@ -1,0 +1,10 @@
+package com.microservice.voTemp;
+
+import com.microservice.model.Customer;
+
+public class ResponseTemplate {
+
+	private Customer customer;
+	private Account account;
+	
+}

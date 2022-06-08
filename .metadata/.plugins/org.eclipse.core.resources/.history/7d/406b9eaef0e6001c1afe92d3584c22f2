@@ -1,0 +1,4 @@
+package com.microservice.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+

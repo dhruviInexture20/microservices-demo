@@ -1,0 +1,5 @@
+package com.microservice.repository;
+
+public interface AccountRepository {
+
+}

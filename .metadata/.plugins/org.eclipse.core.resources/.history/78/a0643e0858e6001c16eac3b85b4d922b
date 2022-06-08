@@ -1,0 +1,12 @@
+package com.microservice.service;
+
+import com.microservice.model.Customer;
+
+public interface UserService {
+
+	Customer saveUser(Customer customer);
+
+	Customer getCustomerDetails(long id);
+	
+	
+}

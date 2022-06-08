@@ -1,0 +1,29 @@
+package com.microservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.microservice.model.Customer;
+import com.microservice.repository.CustomerRepository;
+
+@Service
+public class CustomerServiceImpl implements CustomerService {
+
+	@Autowired
+	CustomerRepository repo;
+	
+	@Override
+	public Customer saveUser(Customer customer) {
+		
+		return repo.save(customer);
+
+	}
+
+	@Override
+	public Customer getCustomerDetails(long id) {
+
+		return repo findById(id);
+		
+	}
+	
+}

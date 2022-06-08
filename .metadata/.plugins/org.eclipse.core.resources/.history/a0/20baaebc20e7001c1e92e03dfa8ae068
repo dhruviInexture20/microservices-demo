@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: Api Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: Customer Service
+          uri: localhost://8001/
+          predicates:
+          - Path=/customer/**
+        - id: AccountService
+          uri: localhost://8002/
+          predicates:
+          - Path=/account/**
+            
+            

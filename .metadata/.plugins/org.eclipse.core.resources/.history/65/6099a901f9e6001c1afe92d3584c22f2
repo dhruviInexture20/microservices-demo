@@ -1,0 +1,46 @@
+package com.microservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.microservice.model.Customer;
+import com.microservice.repository.CustomerRepository;
+import com.microservice.voTemp.Account;
+import com.microservice.voTemp.ResponseTemplate;
+
+@Service
+public class CustomerServiceImpl implements CustomerService {
+
+	@Autowired
+	private CustomerRepository repo;
+	
+	@Autowired	
+	private RestTemplate restTemplate;
+	
+	@Override
+	public Customer saveCustomer(Customer customer) {
+		
+		return repo.save(customer);
+
+	}
+
+	@Override
+	public Customer getCustomerDetails(long id) {
+
+		return repo.getDistinctByUserid(id);
+		
+	}
+
+	@Override
+	public ResponseTemplate getCustomerAndAccount(long userid) {
+		
+		ResponseTemplate returnView = new ResponseTemplate();
+		returnView.setCustomer(repo.getDistinctByUserid(userid));
+		
+		Account account = restTemplate.getForObject(, Account.class);
+		
+		return null;
+	}
+	
+}

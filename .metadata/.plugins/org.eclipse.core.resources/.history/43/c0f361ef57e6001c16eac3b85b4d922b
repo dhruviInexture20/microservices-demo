@@ -1,0 +1,29 @@
+package com.microservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.microservice.model.Customer;
+import com.microservice.repository.CustomerRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	CustomerRepository repo;
+	
+	@Override
+	public Customer saveUser() {
+
+		repo.save(customer);
+		
+		return null;
+	}
+
+	@Override
+	public Customer getCustomerDetails(long id) {
+
+		return null;
+	}
+	
+}
