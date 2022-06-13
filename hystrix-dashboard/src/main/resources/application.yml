@@ -1,0 +1,20 @@
+server:
+  port: 9005
+  
+spring:
+  application:
+    name: HYSTRIX-DASHBOARD
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:9006
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream,info, health
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"
+

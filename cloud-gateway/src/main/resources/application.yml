@@ -14,3 +14,26 @@ spring:
           uri: lb://Account/
           predicates:
           - Path=/account/**
+  main:
+    web-application-type: reactive
+
+hystrix:
+  commands:
+    fallbackCmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
