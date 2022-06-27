@@ -11632,3 +11632,15 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-13 16:09:17.669
 !MESSAGE executing callback sts4.classpath.vsAtQFwY SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-13 19:04:18.857
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.vsAtQFwY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-13 19:04:18.857
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.vsAtQFwY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-13 19:04:18.858
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-13 19:04:18.858
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.vsAtQFwY => OK
